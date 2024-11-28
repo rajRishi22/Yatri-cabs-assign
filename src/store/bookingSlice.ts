@@ -1,46 +1,23 @@
+import { createSlice } from '@reduxjs/toolkit';
 
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface BookingDetails {
-  from: string;
-  to: string;
-  pickUpDate: string;
-  returnDate: string;
-  pickUpAt?: string; // Optional field
-}
-
-interface BookingState {
-  activeTab: 'outstation' | 'local' | 'airport';
-  tripType: 'one-way' | 'round-trip';
-  bookingDetails: BookingDetails;
-}
-
-const initialState: BookingState = {
+const initialState = {
   activeTab: 'outstation',
-  tripType: 'one-way',
-  bookingDetails: {
-    from: '',
-    to: '',
-    pickUpDate: '',
-    returnDate: '',
-  },
+  tripType: 'one-way', // Default for Outstation
 };
 
 const bookingSlice = createSlice({
   name: 'booking',
   initialState,
   reducers: {
-    setActiveTab(state, action: PayloadAction<'outstation' | 'local' | 'airport'>) {
+    setActiveTab(state, action) {
       state.activeTab = action.payload;
+      if (action.payload !== 'outstation') state.tripType = 'one-way'; // Reset trip type for non-Outstation
     },
-    setTripType(state, action: PayloadAction<'one-way' | 'round-trip'>) {
+    setTripType(state, action) {
       state.tripType = action.payload;
-    },
-    setBookingDetails(state, action: PayloadAction<Partial<BookingDetails>>) {
-      state.bookingDetails = { ...state.bookingDetails, ...action.payload };
     },
   },
 });
 
-export const { setActiveTab, setTripType, setBookingDetails } = bookingSlice.actions;
+export const { setActiveTab, setTripType } = bookingSlice.actions;
 export default bookingSlice.reducer;

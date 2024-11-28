@@ -1,0 +1,77 @@
+.booking-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .booking-tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tab {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px;
+    border-radius: 10px;
+    background: #f3f3f3;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tab.active {
+    background: #028a0f;
+    color: white;
+  }
+  
+  .trip-type {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .trip-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px;
+    border-radius: 10px;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .trip-button.active {
+    background: #028a0f;
+    color: white;
+  }
+  
+  .booking-form {
+    margin-top: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .explore-button {
+    width: 100%;
+    padding: 10px;
+    background: #028a0f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
