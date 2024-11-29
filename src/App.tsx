@@ -22,12 +22,13 @@ function App() {
           <div className="container">
             <div className="hero-content">
               <h1 className="hero-title">
-                INDIA'S <span>LEADING</span><br />
-                ONE-WAY INTER-CITY<br />
+                INDIA'S <span>LEADING <br />
+                ONE-WAY INTER-CITY </span><br />
                 CAB SERVICE PROVIDER
               </h1>
             </div>
             <BookingForm />
+            
           </div>
         </main>
         <Features />

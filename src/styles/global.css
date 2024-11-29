@@ -15,6 +15,7 @@ body {
 }
 
 .container {
+  display: flex;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -125,8 +126,11 @@ body {
 }
 
 .car-image img {
+  
+  filter: brightness(0.5);
   width: 100%;
   border-radius: 8px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
 }
 
 /* Car Types Section */
@@ -332,4 +336,8 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: var(--gray-200);
+}
+
+.yatri-page{
+  background-color: var(--gray-100);
 }

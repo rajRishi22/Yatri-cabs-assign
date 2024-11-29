@@ -9,7 +9,7 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Submit logic here
+    // Yahan pe API call karwa do
   };
 
   return (
